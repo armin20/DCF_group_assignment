@@ -51,19 +51,22 @@ tr:hover {
   background-color: unset;
 }
 /*Header Style*/
-.i {
+.header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   height: 0vw;
   margin-left: 0;
 }
-.header-style {
+.italic-style{
+  font-size: 40px; margin-left: 10px;
+}
+/* .header-style {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
   margin-bottom: 15vmin;
   height: 0vw;
-}
+} */
 /*Global Style*/
 html {
   scroll-behavior: smooth;
@@ -73,8 +76,14 @@ p {
 }
 /*Responive Style*/
 @media screen and (max-width: 1200px) {
-  .i {
-    text-align: center;
+  .header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    height: 0vw;
+    margin-left: 0;
+  }
+  .italic-style{
+    font-size: 40px; margin-left: 10px;
   }
   .icon {
     display: none;
