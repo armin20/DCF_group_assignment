@@ -1,263 +1,254 @@
 <!DOCTYPE html>
-
-
 <html>
-    <head>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" type="image/png"
+        href="./images/kisspng-computer-icons-passport-travel-visa-internet-dns-hosting-service-5b1d518635f8f5.4759814315286480702211.jpg" />
+    <title>
+        DNS
+    </title>
+</head>
 
-        <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm.css">
-        <link rel="stylesheet" href="./style/style.css">
+<a name="top"></a>
+<body>
+    <header class="i">DCF Project <br /> <i style="font-size: 40px; margin-left: 10px;"><b>DNS Protocol</b></i>
+        <img src="./images/dns.png" alt="DNS icon" class="icon">
+    </header>
+    <nav>
+        <!--I create a nav bar for connecting the pages together-->
+        <ul id="ul-style">
+            <li><a href="index.html" style="color: white;">Home</a></li>
+            <li><a href="about.html" style="color: white;">About</a></li>
+        </ul>
+    </nav>
+    <table border="3" align="left" class="tablestyle">
 
-        <title>
-            DNS Main Page
-        </title>
-
-        <meta charset="utf-8">
-
-    </head>
-
-    <a name="top"></a>
-
-    <body>
-
-        <header class="i">DCF Project <br/> <i style="font-size: 40px; margin-left: 10px;"><b>DNS Protocol</b></i>
-        <img src="./images/dns.png" alt="DNS icon" class="icon"></header>
-
-
-        <nav>        <!--I create a nav bar for connecting the pages together-->
-            <ul id="ul-style">
-               <li><a href="index.html" style="color: white;">Home</a></li>
-               <li><a href="about.html" style="color: white;">About</a></li>
-            
-            </ul>
-         </nav>
-
-
-         <table border="3" align="left" class="tablestyle">
-
-            <caption>Table of Contents</caption>
-            <tr>
-                <th><a href="#names">Domain names</a></th>
-            </tr>
-
-            <tr>
-                <th><a href="#server">Root server</a></th>
-            </tr>
-
-            <tr>
-                <th><a href="#TLD">TLD server</a></th>
-            </tr>
-
-            <tr>
-                <th><a href="#Authoritative">Authoritative name server</a></th>
-            </tr>
-
-            <tr>
-                <th><a href="#Second level">Second level domain</a></th>
-            </tr>
-
-            <tr>
-                <th><a href="#queries">Types of DNS queries</a></th>
-            </tr>
-            <tr>
-
-                <th><a href="#iterative"style="font-size: 15px;">Iterative query</a></th>
-            </tr>
-            <tr>
-                <th><a href="#recursive" style="font-size: 15px;">Recursive query</a></th>
-                
-            </tr>
-            <tr>
-
-                <th><a href="#non-recursive" style="font-size: 15px;">Non-recursive query</a></th>
-            </tr>
-
-            <tr>
+        <caption>Table of Contents</caption>
+        <tr>
+            <th><a href="#names">Domain names</a></th>
+        </tr>
+        <tr>
+            <th><a href="#server">Root server</a></th>
+        </tr>
+        <tr>
+            <th><a href="#TLD">TLD server</a></th>
+        </tr>
+        <tr>
+            <th><a href="#Authoritative">Authoritative name server</a></th>
+        </tr>
+        <tr>
+            <th><a href="#Second level">Second level domain</a></th>
+        </tr>
+        <tr>
+            <th><a href="#queries">Types of DNS queries</a></th>
+        </tr>
+        <tr>
+            <th><a href="#iterative" style="font-size: 15px;">Iterative query</a></th>
+        </tr>
+        <tr>
+            <th><a href="#recursive" style="font-size: 15px;">Recursive query</a></th>
+        </tr>
+        <tr>
+            <th><a href="#non-recursive" style="font-size: 15px;">Non-recursive query</a></th>
+        </tr>
+        <tr>
             <th><a href="#Syntax">DNS protocol Message Syntax</a></th>
-
-
-            </tr>
-
-            <tr><th>
+        </tr>
+        <tr>
+            <th>
                 <a href="#section format">DNS Syntax Section’s Format</a>
-                </th>
-            </tr>
+            </th>
+        </tr>
+    </table>
+    <article>
+        <br/>
+        <p>
+            In the human world, people use names to identify different things like other people, places, things, etc.,
+            unlike the computer world. Computers communicate and identify each other by using numbers like I.P.
+            addresses. To make communication between humans and computers possible, DNS was developed. DNS stands for
+            Domain Name System and resolves names to numbers; it resolves domain names to I.P. addresses. In other
+            words, when we type a web page's name in the browser, DNS converts it to the I.P address of that website so
+            it is understandable for the computer. then, the DNS server searches its database to find a matching I.P
+            address for that name. DNS can be referred to as the phone book of the internet because it works like a
+            phonebook; wherein you search for people’s names and you find their numbers.
+        </p>
+        <h3 id="names">Domain names</h3>
+        <p>Names that we type in a browser URL field like “google.com” are domain names. ICANN which stands for
+            “Internet Corporation for Assigned Names and Numbers” manages these domain names. ICANN is an American
+            non-profit organization founded by Jon Pastel in 1998. This organization is responsible for the maintenance,
+            stability, and security of databases related to namespace and numerical spaces of the internet.</p>
+    
+        <h3 id="server">Root server</h3>
+        <p>In the hierarchy of DNS, the top level is the root. There are 13 sets of roots with unique I.P. addresses
+            placed around the world and they are operated by 12 organizations. The root server provides a list of
+            authoritative name servers for each of the TLDs.</p>
+
+        <h3 id="TLD">TLD server</h3>
+        <p>Refers to the last part of the domain name or the top-level domain. this server stores address information of
+            top-level domains like:
+
+        <ul>
+            <li> .com for commercial businesses</li>
+            <li> .com for commercial businesses</li>
+            <li> .org for organizations</li>
+            <li> .net for network organizations</li>
+            <li> .edu for educational institutions</li>
+        </ul>
+
+        country-code TLDs that represent geographical locations like .ca for Canada. it Also provides a list of
+        authoritative name servers for all domains.
+
+        </p>
+
+        <h3 id="Authoritative">Authoritative name server</h3>
+
+        <p>These servers are the last stop of the DNS query and the final authority which knows the I.P. address and has
+            a collection of domain names with their associated I.P. addresses.</p>
+
+        <h3 id="Second level">Second level domain</h3>
+        <p>The part of a domain that comes before TLD. Like “google” in “google.com”</p>
 
 
-        </table>
 
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/yDAHSM2Pijc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
-         <article>
+        <h2 id="queries">Types of DNS queries</h2>
 
-            <br/>
-            <br/>
+        <h3 id="iterative">iterative query</h3>
+        <br />
+        <br>
+        <p>
+        <ol>
+            <li>Requesting host sends the request to the local DNS server. If the server has the I.P address in its
+                cache memory It will give back a response.</li>
+            <li>If it does not know the I.P. address, it will send a request to the root server. The root server does
+                not have the I.P. address, but it sends back a response for the local server that contains information
+                on whom to contact.</li>
+            <li>Then the local server sends a request to the TLD server as per the root server told. The TLD server also
+                sends back a response with information on whom to contact next.</li>
+            <li>In the last step, the local server sends a request to the authoritative name server and receives a
+                response containing the requested I.P. address. The local server stores this I.P. address in its cache
+                for the next time.</li>
+        </ol>
+        </p>
+        <h3 id="recursive">Recursive query</h3>
+        <br/>
+        <br>
+        <p>
+        <ol>
+            <li>Requesting host sends the request to the local DNS server.</li>
+            <li>The local server forwards this request to the root server.</li>
+            <li>The root server sends this request to the TLD server.</li>
+            <li>TLD server redirects the request to the authoritative name server.</li>
+            <li>Authoritative name server sends back the response including the I.P. address and the response comes back
+                to level by level in the recursive format that it was sent.</li>
+        </ol>
+        </p>
+        <img src="./images/query.png" alt="Recursive query">
+        <h5><i>source: NextGenSecurity (<a
+                    href="https://nextgensecurity.info/2020/08/31/dns-deep-dive/">https://nextgensecurity.info/2020/08/31/dns-deep-dive/</a>)</i>
+        </h5>
+        <h3 id="non-recursive">Non-recursive query</h3>
+        <p>To prevent additional bandwidth consumption and to reduce the load on servers, DNS local servers save the
+            I.P. addresses of the previously visited websites in their cache and will respond to the query with the I.P.
+            address upon receiving it and there is no need for further communication with other servers.
 
-            <p>
-                In the human world, people use names to identify different things like other people, places, things, etc., unlike the computer world. Computers communicate and identify each other by using numbers like I.P. addresses. To make communication between humans and computers possible, DNS was developed. DNS stands for Domain Name System and resolves names to numbers; it resolves domain names to I.P. addresses. In other words, when we type a web page's name in the browser, DNS converts it to the I.P address of that website so it is understandable for the computer. then, the DNS server searches its database to find a matching I.P address for that name. DNS can be referred to as the phone book of the internet because it works like a phonebook; wherein you search for people’s names and you find their numbers.
-            </p>
-
-            <h3 id="names">Domain names</h3>
-            <p>Names that we type in a browser URL field like “google.com” are domain names. ICANN which stands for “Internet Corporation for Assigned Names and Numbers” manages these domain names. ICANN is an American non-profit organization founded by Jon Pastel in 1998. This organization is responsible for the maintenance, stability, and security of databases related to namespace and numerical spaces of the internet.</p>
-
-            <h3 id="server">Root server</h3>
-
-            <p>In the hierarchy of DNS, the top level is the root. There are 13 sets of roots with unique I.P. addresses placed around the world and they are operated by 12 organizations. The root server provides a list of authoritative name servers for each of the TLDs.</p>
-            
-            
-
-            <h3 id="TLD">TLD server</h3>
-            <p>Refers to the last part of the domain name or the top-level domain. this server stores address information of top-level domains like:
-
-                <ul>
-                    <li> .com for commercial businesses</li>
-                    <li> .com for commercial businesses</li>
-                    <li> .org for organizations</li>       
-                    <li> .net for network organizations</li> 
-                    <li> .edu for educational institutions</li>
-                </ul>
-
-                country-code TLDs that represent geographical locations like .ca for Canada. it Also provides a list of authoritative name servers for all domains.
-
-            </p>
-
-            <h3 id="Authoritative">Authoritative name server</h3>
-
-            <p>These servers are the last stop of the DNS query and the final authority which knows the I.P. address and has a collection of domain names with their associated I.P. addresses.</p>
-
-            <h3 id="Second level">Second level domain</h3> 
-            <p>The part of a domain that comes before TLD. Like “google” in “google.com”</p>
-
-
-
-            <iframe width="600" height="400" src="https://www.youtube.com/embed/yDAHSM2Pijc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <h2 id="queries">Types of DNS queries</h2>
-
-            <h3 id="iterative">iterative query</h3>
-            <br/>
-            <br>
-            <p>
-                <ol>
-                    <li>Requesting host sends the request to the local DNS server. If the server has the I.P address in its cache memory It will give back a response.</li>
-                    <li>If it does not know the I.P. address, it will send a request to the root server. The root server does not have the I.P. address, but it sends back a response for the local server that contains information on whom to contact.</li>
-                    <li>Then the local server sends a request to the TLD server as per the root server told. The TLD server also sends back a response with information on whom to contact next.</li>
-                    <li>In the last step, the local server sends a request to the authoritative name server and receives a response containing the requested I.P. address. The local server stores this I.P. address in its cache for the next time.</li>
-
-                </ol>
-            </p>
-
-            <h3 id="recursive">Recursive query</h3>
-            <br/>
-            <br>
-
-            <p>
-                <ol>
-                    <li>Requesting host sends the request to the local DNS server.</li>
-                    <li>The local server forwards this request to the root server.</li>
-                    <li>The root server sends this request to the TLD server.</li>
-                    <li>TLD server redirects the request to the authoritative name server.</li>
-                    <li>Authoritative name server sends back the response including the I.P. address and the response comes back to level by level in the recursive format that it was sent.</li>
-                </ol>
-            </p>
-
-            <h3 id="non-recursive">Non-recursive query</h3>
-
-            <p>To prevent additional bandwidth consumption and to reduce the load on servers, DNS local servers save the I.P. addresses of the previously visited websites in their cache and will respond to the query with the I.P. address upon receiving it and there is no need for further communication with other servers.
-
-             </p>
-            
-            <img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png" style="width:650px; height: 300px;" alt="DNS and Webpage Query">
-
-             <br/>
-             <br/>
-
-            <h3 id="Syntax">DNS protocol Message Syntax</h3>
-            <p>The structure of the message created when requesting DNS consists of five section: Header, Question, Answer, Authority, and Additional.
+        </p>
+        <img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png"
+            style="width:650px; height: 300px;" alt="DNS and Webpage Query">
+        <br/>
+        <br/>
+        <h3 id="Syntax">DNS protocol Message Syntax</h3>
+        <p>The structure of the message created when requesting DNS consists of five section: Header, Question, Answer,
+            Authority, and Additional.
 
             <img src="./images/Picture1.png" style="padding:100px 0 50px 100px; width: 200px;" alt="message syntax">
-                <br/>
-                <br/>
+            <br />
+            <br />
 
-            <ul>
-                <li>
-                     Header: It indicates whether a query, response, or other sections (Question, Answer, Authority, Additional) are used
-                </li>
-                <li>
-                    Question: Use a query record, which means a request to the name server. It is used in both query and response messages. It contains the domain name that is being queried (the QNAME), along with the class (QCLASS) and type (QTYPE) of resource record requested.
-               </li>
-               <li>
-                 Answer: Resulting of resource record for the request. It contains response messages that the server replies to the client.
-           </li>
-
-           <li>
-             Authority: Resource records indicates authentication, providing information about servers with authentication privileges for queries.
+        <ul>
+            <li>
+                Header: It indicates whether a query, response, or other sections (Question, Answer, Authority,
+                Additional) are used
             </li>
             <li>
-             Additional: Resource record which contains other information.
+                Question: Use a query record, which means a request to the name server. It is used in both query and
+                response messages. It contains the domain name that is being queried (the QNAME), along with the class
+                (QCLASS) and type (QTYPE) of resource record requested.
             </li>
-            </ul>
+            <li>
+                Answer: Resulting of resource record for the request. It contains response messages that the server
+                replies to the client.
+            </li>
 
-            </p>
+            <li>
+                Authority: Resource records indicates authentication, providing information about servers with
+                authentication privileges for queries.
+            </li>
+            <li>
+                Additional: Resource record which contains other information.
+            </li>
+        </ul>
+        </p>
+        <h2 id="section format">DNS Syntax Section’s Format</h2>
+        <h3>Header Section Format</h3>
+        <br/>
+        <br/>
+        <img src="./images/Picture2.png" alt="header section format">
+        <p>
 
-            <h2 id="section format">DNS Syntax Section’s Format</h2>
+            The Identification field verifies that the responses answered to the client's query are related. The client
+            gives a different number each time it sends a query request, and the server replies by copying the number to
+            the corresponding response message.
 
-            <h3>Header Section Format</h3>
+            The Parameter field (Flag field) is responsible for letting the server or client know a lot of important
+            information about the DNS packet. It determines how the query is handled by the server. This field contains
+            eight bits of information. The information of each bits represents the following.
 
-            <br/>
-            <br/>
-            <img src="./images/Picture2.png" alt="header section format">
-            <p>
+        <ul>
+            <li>
+                QR(Query Response): It indicates the type of message. 0 is a query message, 1 is a response message.
+            </li>
+            <li> OPCODE : Indicates the type of query or response. 0 is standard, 1 is inverse, 2 is server status
+                request.
+            </li>
+            <li>AA(Authoritative Answer): Only used in response messages. It indicates that the name server (DNS) is
+                authoritative for the query host.
+            </li>
+            <li> TC(Truncated): The designation of 1 indicates that the response was truncated to 512 bytes, exceeding
+                the UDP maximum size of 512 bytes.
+            </li>
+            <li>RD(Recursion Desired): It is used in query messages. 1 means that client wants a recursive query.
+            </li>
+            <li>
+                RA(Recursion Available): It is used in response messages. This refers to the availability of recursive
+                responses from DNS.
+            </li>
+            <li>
+                Z: This is a reserved field. It is designated as 000.
+            </li>
+            <li>
+                RCODE: It shows response errors in response messages. 0 means no error.
+            </li>
+        </ul>
+        </p>
+        <h3>Question Section Format</h3>
+        <br />
+        <br />
 
-                The Identification field verifies that the responses answered to the client's query are related. The client gives a different number each time it sends a query request, and the server replies by copying the number to the corresponding response message.
+        <img src="./images/Picture3.png" alt="Question section format">
+        <h3>Answer, Authority, Additional Section Format</h3>
+        <p>All three sections are sharing same Formation.</p>
 
-                The Parameter field (Flag field) is responsible for letting the server or client know a lot of important information about the DNS packet. It determines how the query is handled by the server. This field contains eight bits of information. The information of each bits represents the following.
-
-                <ul>
-                    <li>
-                         QR(Query Response): It indicates the type of message. 0 is a query message, 1 is a response message.
-                    </li>
-                    <li> OPCODE : Indicates the type of query or response. 0 is standard, 1 is inverse, 2 is server status request.
-                        </li>
-                        <li>AA(Authoritative Answer): Only used in response messages. It indicates that the name server (DNS) is authoritative for the query host.
-                            </li>
-
-                            <li> TC(Truncated): The designation of 1 indicates that the response was truncated to 512 bytes, exceeding the UDP maximum size of 512 bytes.
-                                </li>
-
-                                <li>RD(Recursion Desired): It is used in query messages. 1 means that client wants a recursive query.
-                                    </li>
-
-                                    <li>
-                                         RA(Recursion Available): It is used in response messages. This refers to the availability of recursive responses from DNS.
-                                    </li>
-
-                                    <li>
-                                        Z: This is a reserved field. It is designated as 000.
-                                    </li>
-                                    <li>
-                                        RCODE: It shows response errors in response messages. 0 means no error.
-                                    </li>
-                </ul>
-            </p>
-
-            <h3>Question Section Format</h3>
-
-            <br/>
-            <br/>
-                <img src="./images/Picture3.png" alt="Question section format">
-            
-            <h3>Answer, Authority, Additional Section Format</h3>
-            <p>All three sections are sharing same Formation.</p>
-
-                <img src="./images/Picture4.png" alt="photo from three section">
-
-            
-        </article>
-        
-         <footer id="footer">
-            <a href="#top"  style="font-weight: bolder;font-size:20px; display: block;" >Back To Top</a>
-        </footer>
-    </body>
+        <img src="./images/Picture4.png" alt="photo from three section">
+    </article>
+    <footer id="footer">
+        <a href="#top" style="font-weight: bolder;font-size:20px; display: block;">Back To Top</a>
+    </footer>
+</body>
 </html>
-
-
-
