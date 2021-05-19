@@ -76,6 +76,9 @@ p {
 }
 /*Responive Style*/
 @media screen and (max-width: 1200px) {
+  html {
+    scroll-behavior: smooth;
+  }
   .header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
